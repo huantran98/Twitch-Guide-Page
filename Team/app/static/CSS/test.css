@@ -1,0 +1,30 @@
+.list{
+  width:800px;
+  border:1px solid black;
+  padding: 20px;
+  height:100px;
+  margin-bottom: 10px;
+  background-color: white;
+  }
+
+h1{
+    text-align: center;
+}
+
+.form-control{
+    margin-top: 30px;
+    width:800px;
+}
+
+
+.bar a{  
+  color: black;
+  text-align: center;
+  padding: 11px 20px;
+  font-size: 15px;
+}
+
+a:hover {
+  background-color: white;
+}
+

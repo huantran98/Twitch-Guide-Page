@@ -1,0 +1,36 @@
+body{
+    background-color: white ;
+    min-height: 100vh;
+}
+
+input, textarea {
+    width:70%;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+  }
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.modal-content {
+    background-color: #34495e;
+    opacity: .95;
+}
+
+.a-task {
+    padding: 25px;
+    background-color: #34495e;
+    opacity: .95;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+}
+

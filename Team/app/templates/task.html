@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="col-sm-8 main-section">
+    <div class="col-sm-12 modal-content" style="background-color: #34495e;">
+        <legend><h1 style="color: white;">{{ legend }}</h1></legend>
+
+        <form action="" method="POST" class="add">
+          {{ form.hidden_tag() }}
+          {% if legend == 'Create Task' %}
+            <div class="form-group">
+              <label for="exampleFormControlInput1" style="color: white;">Name of Task</label>
+              <input type="text" name="nameTitle" class="form-control" id="exampleFormControlInput1" placeholder="e.g. Finish CMPE 131 project" required>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" style="color: white;">Task Description</label>
+              <textarea name="content" placeholder="e.g. Finish UI" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          {% else %}
+            <div class="form-group">
+              <label for="exampleFormControlInput1" style="color: white;">Name of Task</label>
+              <input type="text" name="nameTitle" class="form-control" id="exampleFormControlInput1" placeholder="e.g. Finish CMPE 131 project" value={{post.nameTitle}} required>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" style="color: white;">Task Description</label>
+              <textarea name="content" placeholder="e.g. Finish UI" value={{post.content}} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          {% endif %}
+          <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+            
+{% endblock content %} 

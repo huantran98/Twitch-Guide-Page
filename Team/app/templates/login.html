@@ -1,0 +1,77 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<script src="https://kit.fontawesome.com/5b899e26a3.js"></script>
+
+<!--<div class="container mt-5 border p-3 bg-light align-items-center" style="width: 600px">-->
+<!--    <h1 class="text-center">Sign In</h1>-->
+<!--    <div class="row justify-content-center">-->
+
+<!--        <div class="col-md-6">-->
+<!--            <form action="" method="post" novalidate>-->
+<!--                {{ form.hidden_tag() }}-->
+<!--                <p>-->
+<!--                    {{ form.username.label }}<br>-->
+<!--                    {{ form.username(size=32) }}-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    {{ form.password.label }}<br>-->
+<!--                    {{ form.password(size=32) }}-->
+<!--                </p>-->
+<!--                <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>-->
+<!--                <p>{{ form.submit() }}</p><p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>-->
+<!--            </form>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-6">-->
+<!--            <img src="/static/notebook2.jpeg" alt="a notebook">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+        <div class="modal-content">
+            <div class="col-12 user-img">
+                <img src="/static/person.png" alt="person">
+            </div>
+            <div class="col-12 user-name">
+                <h1>Sign In</h1>
+            </div>
+            <div class="col-12 form-input">
+                <form action="" method="post" novalidate>
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        <p class="form-control">
+                        {{ form.username.label }} <br>
+                        {{ form.username(size=32) }}
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-control">
+                        {{ form.password.label }} <br>
+                        {{ form.password(size=32) }}
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="form-control">
+                        {{ form.remember_me() }}
+                        {{ form.remember_me.label }}
+                        </p>
+                    </div>
+                    <p>
+                        {{ form.submit() }}
+                    </p>
+                </form>
+            </div>
+            <div class="col-12 link-part">
+                <a href="{{ url_for('register') }}">Register</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

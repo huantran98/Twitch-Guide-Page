@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="col-sm-8 main-section">
+    <div class="col-sm-12 modal-content" style="background-color: #34495e;">
+      <legend><h1 style="color: white;">{{ legend }}</h1></legend>
+      <form action="{% if post %}{{ url_for(url, id = post.id) }}{%else%}{{ url_for(url) }}{%endif%}" method="post" name="mail">
+        {{ form.hidden_tag() }}
+          <div class="form-group">
+            <label for="Destination" style="color: white;">To:</label>
+            <input type="text" name="email" class="form-control" id="Destination" placeholder="e.g. joe@gmail.com" required>
+          </div>
+          {% if url == 'mes' %}
+          <div class="form-group">
+            <label for="Subject" style="color: white;">Subject</label>
+            <input type="text" name="subject" class="form-control" id="Subject" placeholder="e.g. CMPE 131 Project">
+          </div>
+          <div class="form-group">
+            <label for="Message" style="color: white;">Message</label>
+            <textarea name="content" id="Message" class="form-control" contenteditable="true" placeholder="Enter message here" rows="10"></textarea>
+          </div>
+          {% endif %}
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
