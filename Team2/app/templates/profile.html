@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <img src="/static/person.img" alt="profile pic">
+    <h1>{{ user.username }}</h1>
+    <p>{{ user.followers.count() }} followers |
+              {% if user.id == g.user.id %}
+<!--                  <a href="{{ url_for('edit') }}">Edit your profile</a>-->
+              {% elif not g.user.is_following(user) %}
+                  <a href="{{ url_for('follow', nickname=user.nickname) }}">Follow</a>
+              {% else %}
+                  <a href="{{ url_for('unfollow', nickname=user.nickname) }}">Unfollow</a>
+              {% endif %}
+    </p>
+</div>
+
+{% endblock %}

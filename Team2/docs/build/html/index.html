@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>StuffToDo &#8212; StuffToDo 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="stufftodo">
+<h1>StuffToDo<a class="headerlink" href="#stufftodo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>As busy college students, one of the biggest challenges we face is keep track of all the things to do. Students have many classes throughout the day, multiple assignments to do, study for other classes, and may have their own errands to run. With this issue in mind, our group felt this to be an interesting challenge to take on and decided to create <strong>StuffToDo</strong>.</p>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The computer should have Python version 3.6 as well as pip installed to setup a localhost web server for the development of the project.</p>
+<div class="section" id="prerequisites">
+<h3>Prerequisites:<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Flask</p></li>
+<li><p>Flask-SQLAlchemy</p></li>
+<li><p>Flask-WTF</p></li>
+<li><p>Flask-Login</p></li>
+<li><p>Flask-mail</p></li>
+<li><p>Flask-Bootstrap</p></li>
+<li><p>WTForms</p></li>
+<li><p>SQLAlchemy</p></li>
+<li><p>Werkzeug</p></li>
+<li><p>Jinja2</p></li>
+<li><p>datetime</p></li>
+</ul>
+</div>
+<div class="section" id="installing">
+<h3>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h3>
+<p>Clone this git repo then install the required extensions. Use Terminal to install each extension</p>
+<p>Install Flask:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">Flask</span>
+</pre></div>
+</div>
+<p>Install Flask-WTF, Flask-SQLAlchemy, Flask-Login:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">flask</span><span class="o">-</span><span class="n">wtf</span> <span class="n">flask</span><span class="o">-</span><span class="n">sqlalchemy</span> <span class="n">flask</span><span class="o">-</span><span class="n">login</span>
+</pre></div>
+</div>
+<p>Apply the above command until every  extension is installed</p>
+</div>
+<div class="section" id="running-flask-project">
+<h3>Running Flask Project<a class="headerlink" href="#running-flask-project" title="Permalink to this headline">¶</a></h3>
+<p>Export the main file of the project by one of two following commands:</p>
+<p>For Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">FLASK_APP</span><span class="o">=&lt;</span><span class="n">filename</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For Mac:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">FLASK_APP</span><span class="o">=&lt;</span><span class="n">filename</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Then, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flask</span> <span class="n">run</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="navigating-the-app">
+<h2>Navigating the app<a class="headerlink" href="#navigating-the-app" title="Permalink to this headline">¶</a></h2>
+<p><em>Login</em></p>
+<img alt="_images/SignIn.png" src="_images/SignIn.png" />
+<p>Existing users can enter their login information to view their tasks. New users can click on <strong>Register</strong> to sign up.
+If a user forgets their password, they can reset it by clicking <strong>Forgot password?</strong></p>
+<p><em>Register</em></p>
+<img alt="_images/Register.png" src="_images/Register.png" />
+<p>New users enter their name, email, and a password to create an account.</p>
+<p><em>Forgot Password</em></p>
+<img alt="_images/ForgotPassword.png" src="_images/ForgotPassword.png" />
+<p>Users enter their email where an email to reset their message will be sent.</p>
+<p><em>Index</em></p>
+<img alt="_images/Index.png" src="_images/Index.png" />
+<p>This is the homepage of the app. Automatically, users are able to view complete and incomplete
+tasks. In the navbar, users can navigate to the homepage, create a task, send a message,
+and logout.</p>
+<p><em>Create Task</em></p>
+<img alt="_images/CreateTask.png" src="_images/CreateTask.png" />
+<p>To create a task, users enter in the name of the task, followed by an optional short
+description. After hitting submit, the task will be displayed on the homepage.</p>
+<p><em>Message</em></p>
+<img alt="_images/Message.png" src="_images/Message.png" />
+<p>To send a message, users enter the destination (an email address), the subject, and
+the message they would like to send. After hitting submit, the message will be sent as
+an email to the given destination.</p>
+<p><em>Task Options</em></p>
+<img alt="_images/TaskOptions.png" src="_images/TaskOptions.png" />
+<p>Each individual task on the homepage under <strong>Task’s to Do</strong> each have the option to
+<strong>delete</strong>, <strong>edit</strong>, <strong>complete</strong>, or <strong>share</strong>.</p>
+<p><em>Edit Task</em></p>
+<img alt="_images/EditTask.png" src="_images/EditTask.png" />
+<p>When editing a task, the existing title and description will show up. Users have the
+option edit the name or description.</p>
+<p><em>Share Task</em></p>
+<img alt="_images/ShareTask.png" src="_images/ShareTask.png" />
+<p>To share a task, users enter the destination (an email address) for the task to be sent
+to. After sending, the task’s name and description will be sent to the destination
+in the form of an email.</p>
+</div>
+<div class="section" id="app-directory">
+<h2>app directory<a class="headerlink" href="#app-directory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="app-forms-module">
+<h3>app.forms module<a class="headerlink" href="#app-forms-module" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="app-models-module">
+<h3>app.models module<a class="headerlink" href="#app-models-module" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="app-routes-module">
+<h3>app.routes module<a class="headerlink" href="#app-routes-module" title="Permalink to this headline">¶</a></h3>
+<p>This file is responsible for backend routing.</p>
+<p><strong>def index</strong> - Homepage :return: Displays all of user’s tasks.</p>
+<p><strong>def logout</strong> - Logout :return: Logs user out of account and redirects to login page.</p>
+<dl class="simple">
+<dt><strong>def register</strong> - Registration for new users :return: If user enters valid email,</dt><dd><p>username, and password credentials saved to db.</p>
+</dd>
+</dl>
+<p><strong>def add</strong> - Creates a new task :return: Creates a new task that is saved to db.</p>
+<p><strong>def delete(id)</strong> - Delete a task by id :return: Deletes an existing task by id.</p>
+<p><strong>def edit(id)</strong> - Edit task page :return: Get task data by id, check task’s owner and if task’s is writable.</p>
+<p><strong>def complete(id)</strong> - Mark task as complete :return: Get task by id, mark as complete.</p>
+<dl class="simple">
+<dt><strong>def mes</strong> - Send message to other users via email :return: Form to fill in a Message</dt><dd><p>via Flask mail</p>
+</dd>
+</dl>
+<p><strong>def share(id)</strong> - Share tasks with other users by id :return: User shares a task with other users through email via Flask mail.</p>
+<p><strong>def sendResetEmail(user)</strong> - Email with reset link :return: An email is sent to user after requesting a reset link.</p>
+<p><strong>def resetRequest</strong> - Forgot password option on login :return: Redirects user to a template, prompts user to enter an email to reset password.</p>
+<dl class="simple">
+<dt><strong>def resetToken(token)</strong> Generates a link for reset :return: Link is sent via email to user who requests a reset,</dt><dd><p>only valid for 30 mins. Uses a token generated by getResetToken().</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">StuffToDo</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emanuel Donie Ypon, Huan Tran, Tatsuya Hayashi, Yenni Lam.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,231 @@
+{% extends "bootstrap/base.html" %}
+
+        <div class="bar">
+                <a class="active" href="#home">Home</a>
+                <a class="active" href="#Logout">Logout</a>
+        </div>
+
+    <h1>Add Friend</h1>
+
+    <div class="back">
+        
+        <div class="col-md-4 sum">
+
+            <div class="list d-flex justify-content-around">
+
+                
+                <div class="form-group">
+                
+                    <input type="text" placeholder="Search" size="55">
+
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <button type="Submit" class="btn btn-primary" onclick="myFunction()">Send Request</button>
+                    
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample1.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Kyle</a></h5>
+                    <div> 2 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change1()" class="btn btn-primary" type="button" value="Add Friend" id="myButton1"></input>
+                </div>
+            </div>
+
+                        
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample2.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Jayvon</a></h5>
+                    <div> 7 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change2()" class="btn btn-primary" type="button" value="Add Friend" id="myButton2"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample3.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Harper</a></h5>
+                    <div> 14 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change3()" class="btn btn-primary" type="button" value="Add Friend" id="myButton3"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample4.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Moses</a></h5>
+                    <div> 9 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change4()" class="btn btn-primary" type="button" value="Add Friend" id="myButton4"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample5.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Macey</a></h5>
+                    <div> 13 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change5()" class="btn btn-primary" type="button" value="Add Friend" id="myButton5"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample6.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Paloma</a></h5>
+                    <div> 4 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change6()" class="btn btn-primary" type="button" value="Add Friend" id="myButton6"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample7.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Paola</a></h5>
+                    <div> 1 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <input onclick="change7()" class="btn btn-primary" type="button" value="Add Friend" id="myButton7"></input>
+                </div>
+            </div>
+
+            <div class="list d-flex justify-content-around">
+
+                <div class="col-sm-2">
+                    <img src="Photo/sample8.jpeg" class="rounded-circle" width="90">
+                </div>
+                <div>
+                    <h5><a href="#" class="person">Cara</a></h5>
+                    <div> 8 mutual Friend </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">   
+                    <input onclick="change8()" class="btn btn-primary" type="button" value="Add Friend" id="myButton8"></input>
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+
+        <script>
+            function myFunction() {
+              alert("Sent Friend Request!");
+            }
+
+            $(document).ready(function() { 
+                $("button").click(function() { 
+                $("#s").html("Sent Request"); 
+                }); 
+            }); 
+
+            function change1() 
+            {
+                var elem = document.getElementById("myButton1");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change2() 
+            {
+                var elem = document.getElementById("myButton2");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change3() 
+            {
+                var elem = document.getElementById("myButton3");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change4()
+            {
+                var elem = document.getElementById("myButton4");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change5()
+            {
+                var elem = document.getElementById("myButton5");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change6() 
+            {
+                var elem = document.getElementById("myButton6");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change7() 
+            {
+                var elem = document.getElementById("myButton7");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+
+            function change8()
+            {
+                var elem = document.getElementById("myButton8");
+                if (elem.value=="Cancel") elem.value = "Add Friend";
+                else elem.value = "Cancel";
+            }
+        </script>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  {% endblock %}
+

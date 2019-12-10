@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <h1>Welcome, {{user.username}}</h1>
+
+        <div class="row">
+            <div class="col-lg-6 left-side">
+                <h2>Tasks to Do:</h2>
+                <div class="row">
+                    {% for post in post %}
+                    {% if post.complete==False and post.user_id==user.id %}
+                        <div class="col-lg-4 col-sm-6 a-task">
+                            <h3 style="color: white;">{{post.nameTitle}}</h3>
+                            <p style="color: white;">{{post.content}}</p>
+                            <a href="{{ url_for('delete', id = post.id) }}"><i class="material-icons">delete</i></a>
+                            <a href="{{ url_for('edit', id = post.id) }}">&nbsp;&#9998;&nbsp;</a>
+                            <a href="{{ url_for('complete', id = post.id) }}">&#10003;</a>
+                            <a href="{{ url_for('share', id = post.id) }}">share</a>
+                        </div>
+<!--                        <div class="card-panel hoverable">-->
+<!--                            <h3 style="color: white;">{{post.nameTitle}}</h3>-->
+<!--                            <p style="color: white;">{{post.content}}</p>-->
+<!--                            <a href="{{ url_for('delete', id = post.id) }}"><i class="material-icons">delete</i></a>-->
+<!--                            <a href="{{ url_for('edit', id = post.id) }}">&nbsp;&#9998;&nbsp;</a>-->
+<!--                            <a href="{{ url_for('complete', id = post.id) }}">&#10003;</a>-->
+<!--                            <a href="{{ url_for('share', id = post.id) }}">share</a>-->
+<!--                        </div>-->
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2>Tasks Completed:</h2>
+                <div class="row">
+                    {% for post in post %}
+                    {% if post.complete==True and post.user_id==user.id %}
+                        <div class="col-lg-4 col-sm-6 a-task">
+                            <h3 style="color: white;">{{post.nameTitle}}</h3>
+                            <p style="color: white;">{{post.content}}</p>
+                            <a href="{{ url_for('share', id = post.id) }}">share</a>
+                            <a href="{{ url_for('delete', id = post.id) }}"><i class="material-icons">delete</i></a>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+<!--        <section>-->
+<!--            <div class="container">-->
+<!--                <h1 class="heading">To do</h1>-->
+<!--                {% for post in post %}-->
+<!--                {% if post.complete==False and post.user_id==user.id %}-->
+<!--                <div class="card-wrapper">-->
+<!--                    <div class="card">-->
+<!--                        <h1>{{ post.nameTitle }}</h1>-->
+<!--                        <p class="content">{{ post.content }}</p>-->
+<!--                        <a href="{{ url_for('delete', id = post.id) }}"><i class="material-icons">delete</i></a>-->
+<!--                        <a href="{{ url_for('edit', id = post.id) }}">&nbsp;&#9998;&nbsp;</a>-->
+<!--                        <a href="{{ url_for('complete', id = post.id) }}">&#10003;</a>-->
+<!--                        <a href="{{ url_for('share', id = post.id) }}">share</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                {% endif %}-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        </section>-->
+
+    </div>
+
+{% endblock %}

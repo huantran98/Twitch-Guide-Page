@@ -1,0 +1,23 @@
+{% extends "base.html"}
+
+{% block content %}
+
+  <div class="container background-color: rgb(188, 206, 238)"></div>
+    <div class="container mt-5 border p-3 bg-light">
+        <h1 class="text-center">Add a Friend! <i class="fas fa-user-friends"></i></h1>
+
+        <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Friend's Name or Email:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="e.g. Joe M">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Send a message:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Request</button>
+        </form>
+
+    </div>
+
+{% endblock %}
